@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class Profesor implements Persona {
+class Profesor implements Persona {
     String nombre;
     String apellido;
     String sexo;
@@ -12,6 +12,8 @@ public class Profesor implements Persona {
 
     static ArrayList<Profesor> profesores = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
+
+    public Profesor() {}
 
     public Profesor(String nombre, String apellido, String sexo, int edad, String titulo, int noCedula) {
         this.nombre = nombre;
@@ -34,19 +36,19 @@ public class Profesor implements Persona {
 
     public void registrarProfesor() {
         System.out.print("Nombre: ");
-        String nombre = scanner.nextLine();
+        nombre = scanner.nextLine();
         System.out.print("Apellido: ");
-        String apellido = scanner.nextLine();
+        apellido = scanner.nextLine();
         System.out.print("Sexo: ");
-        String sexo = scanner.nextLine();
+        sexo = scanner.nextLine();
         System.out.print("Edad: ");
-        int edad = scanner.nextInt();
+        edad = scanner.nextInt();
         scanner.nextLine(); // Consume newline
         System.out.print("Título: ");
-        String titulo = scanner.nextLine();
+        titulo = scanner.nextLine();
         System.out.print("No. Cédula: ");
-        int noCedula = scanner.nextInt();
-        profesores.add(new Profesor(nombre, apellido, sexo, edad, titulo, noCedula));
+        noCedula = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
         System.out.println("Profesor registrado exitosamente.");
     }
 
