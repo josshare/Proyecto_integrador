@@ -1,12 +1,8 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
-class Alumno implements Persona, EntidadEducativa {
-    String nombre;
-    String apellido;
+class Alumno extends Persona implements EntidadEducativa {
     int noControlEscolar;
-    int edad;
-    String sexo;
     String semestre;
     ArrayList<String> materias;
 

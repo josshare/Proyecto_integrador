@@ -2,11 +2,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
-class Profesor implements Persona {
-    String nombre;
-    String apellido;
-    String sexo;
-    int edad;
+class Profesor extends Persona {
+    String especialidad;
+    ArrayList<String> materias;
     String titulo;
     int noCedula;
 
@@ -16,12 +14,9 @@ class Profesor implements Persona {
     public Profesor() {}
 
     public Profesor(String nombre, String apellido, String sexo, int edad, String titulo, int noCedula) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.sexo = sexo;
-        this.edad = edad;
-        this.titulo = titulo;
-        this.noCedula = noCedula;
+        super(nombre, apellido, edad, sexo);
+        this.especialidad = especialidad;
+        this.materias = materias;
     }
 
     @Override
