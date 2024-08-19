@@ -3,7 +3,6 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
-
 class Profesor extends Persona {
     String especialidad;
     ArrayList<String> materias;
