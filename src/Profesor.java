@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.InputMismatchException;
+
 
 class Profesor extends Persona {
     String especialidad;
@@ -37,12 +39,24 @@ class Profesor extends Persona {
         System.out.print("Sexo: ");
         sexo = scanner.nextLine();
         System.out.print("Edad: ");
-        edad = scanner.nextInt();
+        try {
+            edad = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Entrada inválida para la edad. Por favor, ingrese un número entero.");
+            scanner.nextLine(); // Consume the invalid input
+            return; // Exit the method if the input is invalid
+        }
         scanner.nextLine(); // Consume newline
         System.out.print("Título: ");
         titulo = scanner.nextLine();
         System.out.print("No. Cédula: ");
-        noCedula = scanner.nextInt();
+        try {
+            noCedula = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Numero de Cédula no Valido. Por favor, ingrese un número entero.");
+            scanner.nextLine(); // Consume the invalid input
+            return; // Exit the method if the input is invalid
+        }
         scanner.nextLine(); // Consume newline
         System.out.println("Profesor registrado exitosamente.");
     }

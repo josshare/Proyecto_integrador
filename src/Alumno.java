@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.Scanner;
 class Alumno extends Persona implements EntidadEducativa {
@@ -50,7 +51,13 @@ class Alumno extends Persona implements EntidadEducativa {
         System.out.print("No. Control Escolar: ");
         noControlEscolar = scanner.nextInt();
         System.out.print("Edad: ");
-        edad = scanner.nextInt();
+        try {
+            edad = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Entrada inválida para la edad. Por favor, ingrese un número entero.");
+            scanner.nextLine(); // Consume the invalid input
+            return; // Exit the method if the input is invalid
+        }
         scanner.nextLine(); // Consume newline
         System.out.print("Sexo: ");
         sexo = scanner.nextLine();
