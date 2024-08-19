@@ -5,7 +5,6 @@ import java.util.InputMismatchException;
 
 class Profesor extends Persona {
     String especialidad;
-    ArrayList<String> materias;
     String titulo;
     int noCedula;
 
@@ -17,7 +16,9 @@ class Profesor extends Persona {
     public Profesor(String nombre, String apellido, String sexo, int edad, String titulo, int noCedula) {
         super(nombre, apellido, edad, sexo);
         this.especialidad = especialidad;
-        this.materias = materias;
+    }
+    public String getNombre() {
+        return this.nombre;
     }
 
     @Override

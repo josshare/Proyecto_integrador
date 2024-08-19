@@ -1,29 +1,30 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // Capturar 2 profesores
-        for (int i = 0; i < 2; i++) {
+        // Capturar 3 profesores
+        for (int i = 0; i < 3; i++) {
             System.out.println("Registro de Profesor " + (i + 1));
             Profesor profesor = new Profesor();
             profesor.registrarProfesor();
             Profesor.profesores.add(profesor);
         }
 
-        // Capturar 3 materias
-        for (int i = 0; i < 3; i++) {
+        // Capturar 4 materias
+        for (int i = 0; i < 4; i++) {
             System.out.println("Registro de Materia " + (i + 1));
             Materia materia = new Materia();
             materia.registrarMateria();
             Materia.materias.add(materia);
         }
 
-        // Capturar 2 alumnos
-        for (int i = 0; i < 2; i++) {
+        // Capturar 3 alumnos
+        for (int i = 0; i < 3; i++) {
             System.out.println("Registro de Alumno " + (i + 1));
             Alumno alumno = new Alumno();
             alumno.registrarAlumno();

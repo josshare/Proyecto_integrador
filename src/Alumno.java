@@ -5,7 +5,6 @@ import java.util.Scanner;
 class Alumno extends Persona implements EntidadEducativa {
     int noControlEscolar;
     String semestre;
-    ArrayList<String> materias;
 
     static ArrayList<Alumno> alumnos = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
@@ -19,18 +18,17 @@ class Alumno extends Persona implements EntidadEducativa {
         this.edad = edad;
         this.sexo = sexo;
         this.semestre = semestre;
-        this.materias = materias;
     }
 
-    @Override
-    public void getDetalles() {
+    //@Override
+    public void getDetalles(Materia materia) {
         System.out.println("Nombre: " + nombre);
         System.out.println("Apellido: " + apellido);
         System.out.println("No. Control Escolar: " + noControlEscolar);
         System.out.println("Edad: " + edad);
         System.out.println("Sexo: " + sexo);
         System.out.println("Semestre: " + semestre);
-        System.out.println("Materias: " + materias);
+        System.out.println("Materias: " + materia);
     }
 
     @Override
@@ -63,7 +61,7 @@ class Alumno extends Persona implements EntidadEducativa {
         sexo = scanner.nextLine();
         System.out.print("Semestre: ");
         semestre = scanner.nextLine();
-        materias = new ArrayList<>();
+        //materias = new ArrayList<>();
         System.out.println("Alumno registrado exitosamente.");
     }
 

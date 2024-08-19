@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Materia {
     String nombre;
     int noCréditos;
-    String profesor;
+    private Profesor profesor;
 
     static ArrayList<Materia> materias = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
@@ -15,13 +15,12 @@ class Materia {
     public Materia(String nombre, int noCréditos, String profesor) {
         this.nombre = nombre;
         this.noCréditos = noCréditos;
-        this.profesor = profesor;
     }
 
     public void getDetalles() {
         System.out.println("Nombre de la Materia: " + nombre);
         System.out.println("No. Créditos: " + noCréditos);
-        System.out.println("Profesor: " + profesor);
+        //System.out.println("Profesor: " + profesor.getNombre());
     }
 
     public void registrarMateria() {
@@ -31,8 +30,6 @@ class Materia {
         noCréditos = scanner.nextInt();
         scanner.nextLine(); // Consume newline
         System.out.print("Nombre del Profesor: ");
-        profesor = scanner.nextLine();
-        materias.add(new Materia(nombre, noCréditos, profesor));
         System.out.println("Materia registrada exitosamente.");
     }
 
